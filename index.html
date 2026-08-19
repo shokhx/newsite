@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="bio-header">
+    <div class="header-container">
+        <!-- Логотип или Имя -->
+        <a href="#" class="logo">Алексей <span>Иванов</span></a>
+        
+        <!-- Навигация -->
+        <nav class="nav-menu">
+            <a href="#about" class="nav-link active">Обо мне</a>
+            <a href="#timeline" class="nav-link">Хронология</a>
+            <a href="#achievements" class="nav-link">Достижения</a>
+            <a href="#gallery" class="nav-link">Галерея</a>
+        </nav>
+        
+        <!-- Кнопка действия -->
+        <a href="#contact" class="btn-contact">Связаться</a>
+    </div>
+</header>
+
+    <main class="main-content">
+    <!-- Секция 1: Слайд-шоу (Hero) -->
+    <section class="hero-section">
+        <div class="slider-container">
+            <!-- Замените URL-адреса на реальные фото -->
+            <div class="slide active" style="background-image: url('https://unsplash.com')"></div>
+            <div class="slide" style="background-image: url('https://unsplash.com')"></div>
+            <div class="slide" style="background-image: url('https://unsplash.com')"></div>
+        </div>
+        
+        <div class="hero-overlay">
+            <div class="hero-text">
+                <h1>История жизни и достижений</h1>
+                <p>Путь от вдохновения к великим открытиям и проектам, изменившим окружение.</p>
+                <a href="#bio-tabs" class="btn-scroll">Узнать больше</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция 2: Интерактивные переключающиеся таблички -->
+    <section id="bio-tabs" class="tabs-section">
+        <div class="section-container">
+            <!-- Кнопки переключения -->
+            <div class="tabs-navigation">
+                <button class="tab-btn active" onclick="openTab(event, 'tab-story')">История</button>
+                <button class="tab-btn" onclick="openTab(event, 'tab-timeline')">Хронология</button>
+                <button class="tab-btn" onclick="openTab(event, 'tab-awards')">Награды</button>
+            </div>
+
+            <!-- Содержимое табов -->
+            <div class="tabs-content-container">
+                <!-- Таб 1: Общая история -->
+                <div id="tab-story" class="tab-content active">
+                    <div class="card-grid">
+                        <div class="info-card">
+                            <h3>Ранние годы</h3>
+                            <p>Родился в семье инженеров, где с детства прививали любовь к науке, технологиям и постоянному поиску ответов на сложные вопросы.</p>
+                        </div>
+                        <div class="info-card">
+                            <h3>Становление</h3>
+                            <p>Окончил университет с отличием, после чего запустил свой первый успешный проект, который определил дальнейший карьерный вектор.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Таб 2: Хронологическая таблица -->
+                <div id="tab-timeline" class="tab-content">
+                    <table class="bio-table">
+                        <thead>
+                            <tr>
+                                <th>Год</th>
+                                <th>Событие</th>
+                                <th>Результат</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="year">2015</td>
+                                <td>Основание первой исследовательской лаборатории</td>
+                                <td>Разработано 3 патента</td>
+                            </tr>
+                            <tr>
+                                <td class="year">2019</td>
+                                <td>Выход на международную арену</td>
+                                <td>Партнерство с 10+ странами</td>
+                            </tr>
+                            <tr>
+                                <td class="year">2024</td>
+                                <td>Запуск глобального фонда поддержки</td>
+                                <td>Помощь более 1000 молодых ученых</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Таб 3: Табличка наград -->
+                <div id="tab-awards" class="tab-content">
+                    <div class="awards-list">
+                        <div class="award-item">
+                            <span class="award-icon">🏆</span>
+                            <div class="award-text">
+                                <h4>Ученый года (2021)</h4>
+                                <p>За выдающийся вклад в развитие современных технологий и экосистем.</p>
+                            </div>
+                        </div>
+                        <div class="award-item">
+                            <span class="award-icon">🏅</span>
+                            <div class="award-text">
+                                <h4>Орден за заслуги (2023)</h4>
+                                <p>Государственная награда за реализацию социально-значимых проектов.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Секция 3: Большое слайд-шоу галереи -->
+<section id="gallery-slider" class="gallery-section">
+    <div class="gallery-container">
+        <h2 class="gallery-title">Галерея моментов</h2>
+        
+        <div class="big-slider">
+            <!-- Слайд 1 -->
+            <div class="gallery-slide active">
+                <img src="https://unsplash.com" alt="Выступление на конференции">
+                <div class="slide-caption">
+                    <h3>Выступление на Tech Summit</h3>
+                    <p>Презентация новой технологической экосистемы перед международными инвесторами.</p>
+                </div>
+            </div>
+
+            <!-- Слайд 2 -->
+            <div class="gallery-slide">
+                <img src="https://unsplash.com" alt="Работа с командой">
+                <div class="slide-caption">
+                    <h3>Мозговой штурм в лаборатории</h3>
+                    <p>Процесс разработки инновационных решений вместе с ключевой командой инженеров.</p>
+                </div>
+            </div>
+
+            <!-- Слайд 3 -->
+            <div class="gallery-slide">
+                <img src="https://unsplash.com" alt="Вдохновение">
+                <div class="slide-caption">
+                    <h3>Поиск вдохновения</h3>
+                    <p>Экспедиция и исследование природных ландшафтов для поиска новых идей.</p>
+                </div>
+            </div>
+
+            <!-- Стрелки управления -->
+            <button class="slider-arrow prev-arrow" onclick="moveGallerySlide(-1)">&#10094;</button>
+            <button class="slider-arrow next-arrow" onclick="moveGallerySlide(1)">&#10095;</button>
+        </div>
+
+        <!-- Точки-индикаторы -->
+        <div class="slider-dots">
+            <span class="dot active" onclick="setGallerySlide(0)"></span>
+            <span class="dot" onclick="setGallerySlide(1)"></span>
+            <span class="dot" onclick="setGallerySlide(2)"></span>
+        </div>
+    </div>
+</section>
+
+<footer class="bio-footer">
+    <div class="footer-container">
+        <!-- Колонка 1: Описание и Соцсети -->
+        <div class="footer-info">
+            <a href="#" class="footer-logo">Алексей <span>Иванов</span></a>
+            <p class="footer-desc">История одного пути, посвященного инновациям, постоянному развитию и созданию полезных решений для будущего.</p>
+            <div class="social-links">
+                <a href="#" class="social-icon">Telegram</a>
+                <a href="#" class="social-icon">GitHub</a>
+                <a href="#" class="social-icon">LinkedIn</a>
+            </div>
+        </div>
+
+        <!-- Колонка 2: Навигация -->
+        <div class="footer-nav">
+            <h4>Навигация</h4>
+            <ul>
+                <li><a href="#about">Обо мне</a></li>
+                <li><a href="#bio-tabs">Биография</a></li>
+                <li><a href="#gallery-slider">Галерея</a></li>
+                <li><a href="#">Контакты</a></li>
+            </ul>
+        </div>
+
+        <!-- Колонка 3: Подписка на обновления -->
+        <div class="footer-subscribe">
+            <h4>Следить за проектами</h4>
+            <p>Оставьте почту, чтобы получать уведомления о новых публикациях и исследованиях.</p>
+
+            <form class="subscribe-form" id="footer-sub-form">
+    <input type="email" placeholder="Email" required id="sub-input">
+    <button type="submit">→</button>
+</form>
+
+
+        </div>
+    </div>
+
+    <!-- Нижняя плашка с копирайтом -->
+    <div class="footer-bottom">
+        <div class="footer-bottom-content">
+            <p>&copy; 2026 Алексей Иванов. Все права защищены.</p>
+            <p>Дизайн и разработка в VS Code</p>
+        </div>
+    </div>
+</footer>
+
+    <!-- ... здесь заканчивается ваш футер ... -->
+    </footer>
+
+    <!-- НОВЫЙ СЛОЖНЫЙ ВИДЖЕТ СВЯЗИ (ВСТАВЛЯЕМ СЮДА) -->
+    <div class="fixed-contact-widget">
+        <div class="widget-menu" id="widget-menu">
+            <!-- Ссылка в Telegram: замените kskskks на свой точный ник без знака @ -->
+        <a href="https://t.me/kskskks" target="_blank" class="widget-link telegram-link">
+            <span>Telegram</span>
+        </a>
+            
+        <a href="tel:+998770132806" class="widget-link phone-link">
+                <span data-lang-key="w-phone">Позвонить</span>
+            </a>
+           
+            <form id="widget-callback-form" class="widget-form">
+                <input type="text" id="callback-name" placeholder="Ваше Имя" required>
+                <input type="tel" id="callback-phone" placeholder="Номер телефона" required>
+                <button type="submit">Отправить данные</button>
+            </form>
+        </div>
+       
+        <button class="widget-trigger-btn" onclick="toggleWidgetMenu()">
+            💬
+        </button>
+    </div>
+
+    
+
+
+
+
+
+
+<script src="script.js"></script>
+</body>
+</html>
