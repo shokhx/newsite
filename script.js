@@ -139,7 +139,8 @@ if (subForm) {
         const emailInput = document.getElementById('sub-input');
         const emailValue = emailInput.value;
         try {
-            const response = await fetch('https://onrender.com/api/callback', {
+             const response = await fetch('https://onrender.com', {
+
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ email: emailValue })
@@ -168,10 +169,10 @@ if (callbackForm) {
 
         try {
             // Отправляем запрос на новый роут сервера
-           const response = await fetch('https://onrender.com/api/callback', {
-
-
-                method: 'POST',
+                       
+            
+            const response = await fetch('https://onrender.com', {
+                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ name: nameInput.value, phone: phoneInput.value })
             });
